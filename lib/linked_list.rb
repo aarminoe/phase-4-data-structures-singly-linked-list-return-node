@@ -8,7 +8,18 @@ class LinkedList
   end
 
   def nth_from_end(n)
-    # your code here
+    howFar = 0
+    if n < 1 || head.nil? || n > self.length
+      return nil 
+    else
+      last_node = head
+      while last_node.next_node 
+        howFar += 1
+        last_node = last_node.next_node 
+      end
+    end
+    howFar
   end
+
 
 end
